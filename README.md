@@ -39,7 +39,6 @@ Node app is running at localhost:5000
 ```
 require 'sticks/pipes'
 include Sticks::Pipe
-```
 pipe " docker run --rm -a stdout -a stderr -i -a stdin dokku/actn.io:latest /bin/bash", &Blocks.interactive
 > ls
 > app
@@ -68,6 +67,8 @@ pipe " docker run --rm -a stdout -a stderr -i -a stdin dokku/actn.io:latest /bin
 > var
 > exit
 => #<Process::Status: pid 28101 exit 0>
+```
+
 ## Contributing
 
 1. Fork it ( http://github.com/<my-github-username>/sticks-pipe/fork )
